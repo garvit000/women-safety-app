@@ -13,11 +13,18 @@ final router = GoRouter(
   redirect: (context, state) {
     final isLoggedIn = FirebaseAuth.instance.currentUser != null;
     final isGoingToLogin = state.matchedLocation == '/login';
+    final isAtRoot = state.matchedLocation == '/';
+
+    // If logged in and at root or login, redirect to home
+    if (isLoggedIn && (isAtRoot || isGoingToLogin)) {
+      return '/home';
+    }
 
     // If not logged in and not already going to login, redirect to login
     if (!isLoggedIn && !isGoingToLogin) {
       return '/login';
     }
+    
     return null;
   },
   routes: [

@@ -98,6 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
       await _signInWithCredential(credential);
     } catch (e) {
+      debugPrint('OTP verification error: $e');
       setState(() {
         _isLoading = false;
         _errorMessage = 'Invalid OTP. Please try again.';
@@ -107,14 +108,19 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Future<void> _signInWithCredential(PhoneAuthCredential credential) async {
     try {
-      await _auth.signInWithCredential(credential);
-      if (mounted) {
+      final userCredential = await _auth.signInWithCredential(credential);
+      
+      if (userCredential.user != null && mounted) {
+        // Successfully signed in, navigate to home
         context.go('/home');
+      } else {
+        throw Exception('User is null after sign in');
       }
     } catch (e) {
+      debugPrint('Sign-in error: $e');
       setState(() {
         _isLoading = false;
-        _errorMessage = 'Sign-in failed: $e';
+        _errorMessage = 'Sign-in failed. Please try again.';
       });
     }
   }

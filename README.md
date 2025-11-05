@@ -9,18 +9,32 @@ This is the backend for the SafeHer application, written in Java with Spring Boo
 - Docker
 - Docker Compose
 
-## Environment Variables
+## Setup Instructions
 
-Create a `.env` file in the root of the project with the following variables:
+### 1. Environment Variables
 
+Copy `.env.example` to `.env` and fill in your credentials:
+
+```bash
+cp .env.example .env
 ```
-MONGO_URI=mongodb://localhost:27017/safeher
-JWT_SECRET=your-jwt-secret
-TWILIO_SID=your-twilio-sid
-TWILIO_TOKEN=your-twilio-token
-TWILIO_PHONE_NUMBER=your-twilio-phone-number
-FCM_CREDENTIALS_PATH=your-fcm-credentials-path
-```
+
+Required variables:
+- `MONGODB_URI`: MongoDB connection string (default: mongodb://localhost:27017/safeher)
+- `FCM_CREDENTIALS_PATH`: Path to Firebase service account JSON file
+- `JWT_SECRET`: Secret key for JWT token generation
+- `TWILIO_ACCOUNT_SID`: Twilio account SID (optional, for SMS alerts)
+- `TWILIO_AUTH_TOKEN`: Twilio auth token (optional)
+- `TWILIO_PHONE_NUMBER`: Twilio phone number (optional)
+
+### 2. Firebase Setup
+
+1. Go to [Firebase Console](https://console.firebase.google.com/)
+2. Select your project
+3. Go to Project Settings > Service Accounts
+4. Click "Generate new private key"
+5. Save the JSON file as `firebase-credentials.json` in the project root
+6. Update `FCM_CREDENTIALS_PATH` in `.env` to point to this file
 
 ## Building and Running
 
