@@ -109,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Future<void> _signInWithCredential(PhoneAuthCredential credential) async {
     try {
       final userCredential = await _auth.signInWithCredential(credential);
-      
+
       if (userCredential.user != null && mounted) {
         // Successfully signed in, navigate to home
         context.go('/home');
