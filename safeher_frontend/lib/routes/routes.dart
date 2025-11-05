@@ -24,7 +24,7 @@ final router = GoRouter(
     if (!isLoggedIn && !isGoingToLogin) {
       return '/login';
     }
-    
+
     return null;
   },
   routes: [
