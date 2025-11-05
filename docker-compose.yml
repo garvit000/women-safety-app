@@ -1,0 +1,24 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/safeher
+      - JWT_SECRET=your-jwt-secret
+      - TWILIO_SID=your-twilio-sid
+      - TWILIO_TOKEN=your-twilio-token
+      - TWILIO_PHONE_NUMBER=your-twilio-phone-number
+      - FCM_CREDENTIALS_PATH=your-fcm-credentials-path
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

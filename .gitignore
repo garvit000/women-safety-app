@@ -1,0 +1,147 @@
+# Java/Spring Boot
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Spring Boot JAR files
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker
+docker-compose.override.yml
+
+# Flutter/Dart
+safeher_frontend/.dart_tool/
+safeher_frontend/.flutter-plugins
+safeher_frontend/.flutter-plugins-dependencies
+safeher_frontend/.packages
+safeher_frontend/.pub-cache/
+safeher_frontend/.pub/
+safeher_frontend/build/
+safeher_frontend/.flutter-plugins
+safeher_frontend/.flutter-plugins-dependencies
+
+# Web related
+safeher_frontend/lib/generated_plugin_registrant.dart
+
+# Symbolication related
+safeher_frontend/app.*.symbols
+
+# Obfuscation related
+safeher_frontend/app.*.map.json
+
+# Android Studio
+safeher_frontend/android/app/debug
+safeher_frontend/android/app/profile
+safeher_frontend/android/app/release
+safeher_frontend/android/.gradle
+safeher_frontend/android/captures/
+safeher_frontend/android/gradlew
+safeher_frontend/android/gradlew.bat
+safeher_frontend/android/local.properties
+safeher_frontend/android/**/GeneratedPluginRegistrant.java
+
+# iOS/XCode
+safeher_frontend/ios/**/*.mode1v3
+safeher_frontend/ios/**/*.mode2v3
+safeher_frontend/ios/**/*.moved-aside
+safeher_frontend/ios/**/*.pbxuser
+safeher_frontend/ios/**/*.perspectivev3
+safeher_frontend/ios/**/*sync/
+safeher_frontend/ios/**/.sconsign.dblite
+safeher_frontend/ios/**/.tags*
+safeher_frontend/ios/**/.vagrant/
+safeher_frontend/ios/**/DerivedData/
+safeher_frontend/ios/**/Icon?
+safeher_frontend/ios/**/Pods/
+safeher_frontend/ios/**/.symlinks/
+safeher_frontend/ios/**/profile
+safeher_frontend/ios/**/xcuserdata
+safeher_frontend/ios/.generated/
+safeher_frontend/ios/Flutter/App.framework
+safeher_frontend/ios/Flutter/Flutter.framework
+safeher_frontend/ios/Flutter/Flutter.podspec
+safeher_frontend/ios/Flutter/Generated.xcconfig
+safeher_frontend/ios/Flutter/ephemeral
+safeher_frontend/ios/Flutter/app.flx
+safeher_frontend/ios/Flutter/app.zip
+safeher_frontend/ios/Flutter/flutter_assets/
+safeher_frontend/ios/Flutter/flutter_export_environment.sh
+safeher_frontend/ios/ServiceDefinitions.json
+safeher_frontend/ios/Runner/GeneratedPluginRegistrant.*
+
+# macOS
+safeher_frontend/macos/Flutter/GeneratedPluginRegistrant.swift
+safeher_frontend/macos/Flutter/ephemeral
+
+# Linux
+safeher_frontend/linux/flutter/generated_plugin_registrant.cc
+safeher_frontend/linux/flutter/generated_plugin_registrant.h
+safeher_frontend/linux/flutter/generated_plugins.cmake
+
+# Windows
+safeher_frontend/windows/flutter/generated_plugin_registrant.cc
+safeher_frontend/windows/flutter/generated_plugin_registrant.h
+safeher_frontend/windows/flutter/generated_plugins.cmake
+
+# Coverage
+safeher_frontend/coverage/
+
+# Exceptions to above rules.
+!safeher_frontend/ios/**/default.mode1v3
+!safeher_frontend/ios/**/default.mode2v3
+!safeher_frontend/ios/**/default.pbxuser
+!safeher_frontend/ios/**/default.perspectivev3

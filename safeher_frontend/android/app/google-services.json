@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "767284537428",
+    "project_id": "github-comm",
+    "storage_bucket": "github-comm.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767284537428:android:0e9e3ab5fef40b0f62a5c1",
+        "android_client_info": {
+          "package_name": "com.example.safeher_frontend"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACIsTCP7t7OSdj7O1ZX5wOImRDZjGgXyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
