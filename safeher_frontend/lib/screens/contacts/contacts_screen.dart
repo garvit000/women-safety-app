@@ -278,7 +278,8 @@ class _ContactsScreenState extends State<ContactsScreen> {
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Delete Contact'),
-        content: Text('Are you sure you want to remove ${_contacts[index].name}?'),
+        content:
+            Text('Are you sure you want to remove ${_contacts[index].name}?'),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
